@@ -10,7 +10,7 @@ console.log("WebSocket server running on ws://localhost:5000");
 wss.on("connection", (ws) => {
   console.log("Client connected");
 
-  // Fake streaming transcription (simulates Gemini partial output)
+  
   const fakeSentence = [
     "hello",
     "this",
@@ -44,22 +44,22 @@ wss.on("connection", (ws) => {
 
     const now = Date.now();
 
-    //Detect speech start
+    
     if (rms > SPEECH_THRESHOLD) {
       lastSpeechTime = now;
 
       if (!isSpeaking) {
         isSpeaking = true;
-        console.log("🎤 Speech started");
+        console.log("Speech started");
       }
 
-      // Stream next word (incremental output)
+      
       const word = fakeSentence[wordIndex % fakeSentence.length];
       ws.send(word);
       wordIndex++;
     }
 
-    //Detect speech end
+    
     if (isSpeaking && now - lastSpeechTime > SILENCE_TIMEOUT) {
       isSpeaking = false;
       console.log("Speech ended");
