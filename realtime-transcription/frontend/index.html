@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Real-Time Transcription</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #860051;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    #output {
+      width: 80%;
+      min-height: 100px;
+      border: 1px solid #444;
+      padding: 15px;
+      font-size: 18px;
+      background: #000;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2><i class="fa-solid fa-microphone fa-fade fa-lg" style="color: #b36597;"></i> Real-Time Speech Transcription</h2>
+  <button id="startBtn">Start Recording</button>
+
+  <div id="output"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
