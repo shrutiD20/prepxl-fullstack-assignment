@@ -55,11 +55,11 @@ const CircularEqualizer = () => {
           const yEnd =
             centerY + Math.sin(angle) * (radius + barHeight);
 
-          // 🌈 Rainbow color
+          
           const hue = (i / bufferLength) * 360;
           ctx.strokeStyle = `hsl(${hue}, 100%, 60%)`;
 
-          // ✨ Glow
+          
           ctx.shadowBlur = 15;
           ctx.shadowColor = `hsl(${hue}, 100%, 60%)`;
 
